@@ -1,0 +1,11 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+  mat-card.login-card {
+    background-color: mat.get-theme-color($theme, tertiary, 95);
+  }
+  mat-card-title {
+    color: mat.get-theme-color($theme, primary, 70);
+  }
+}

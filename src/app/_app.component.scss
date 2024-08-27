@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+  .app-header {
+    background-color: mat.get-theme-color($theme, primary, 70);
+    nav {
+      li {
+        a {
+          color: mat.get-theme-color($theme, tertiary, 80);
+          &:hover {
+            color: mat.get-theme-color($theme, tertiary, 90);
+          }
+        }
+      }
+    }
+  }
+}
