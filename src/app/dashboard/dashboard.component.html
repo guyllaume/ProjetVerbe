@@ -1,1 +1,35 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+    <div class="dashboard-card">
+        <mat-card class="journeyCard" (click)="goToJourney()">
+            <mat-card-title>Continue your journey</mat-card-title>
+            <mat-card-subtitle>Start by adding a new verb</mat-card-subtitle>
+            <mat-card-content>
+                lorem ipsum
+            </mat-card-content>
+            <img class="journey" src="../../assets/images/journey.png">
+        </mat-card>
+    </div>
+    <div class="dashboard-card">
+        <mat-card class="dailyCard"  (click)="goToDaily()">
+            <mat-card-title>Daily Quizz</mat-card-title>
+            <mat-card-content>
+                lorem ipsum
+            </mat-card-content>
+            <img class="quizz" src="../../assets/images/quizz.png">
+        </mat-card>
+        <mat-card class="favoriteCard"  (click)="goToFavoriteList()">
+            <div class="overlay"></div>
+            <mat-card-title>Your Favorite Verbs</mat-card-title>
+            <mat-card-content>
+                lorem ipsum
+            </mat-card-content>
+            <img class="star" src="../../assets/images/star-outline.png">
+        </mat-card>
+    </div>
+</div>
+<!-- 
+<div> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+<div> Icons made by <a href="https://www.flaticon.com/authors/vectors-tank" title="Vectors Tank"> Vectors Tank </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+<div> Icons made by <a href="https://www.flaticon.com/authors/fajrul-fitrianto" title="Fajrul Fitrianto"> Fajrul Fitrianto </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+-->
+

@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+  .dashboard-container {
+    background-color: mat.get-theme-color($theme, tertiary, 95);
+  }
+  .journeyCard,
+  .dailyCard,
+  .favoriteCard {
+    background-color: mat.get-theme-color($theme, tertiary, 90);
+  }
+}
