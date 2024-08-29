@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+    .home-container {
+        background-color: mat.get-theme-color($theme, tertiary, 95);
+    }
+    .middle{
+        background-color: mat.get-theme-color($theme, tertiary, 80);
+    }
+    .bg-beige{
+        background-color: mat.get-theme-color($theme, tertiary, 90);
+    }
+    .primaryH2{
+        color: mat.get-theme-color($theme, primary, 60);
+    }
+    .colorWhite{
+        color: mat.get-theme-color($theme, tertiary, 100);
+    }
+    .fontEmphasis{
+        font-family:'Inknut Antiqua';
+        color: mat.get-theme-color($theme, primary, 40);
+    }
+}

@@ -7,12 +7,19 @@
     nav {
       li {
         a {
-          color: mat.get-theme-color($theme, tertiary, 80);
+          color: mat.get-theme-color($theme, tertiary, 100);
           &:hover {
             color: mat.get-theme-color($theme, tertiary, 90);
           }
         }
       }
+    }
+  }
+  footer {
+    background-color: mat.get-theme-color($theme, primary, 60);
+    color: mat.get-theme-color($theme, tertiary, 95);
+    img{
+        background-color: mat.get-theme-color($theme, tertiary, 80);
     }
   }
 }

@@ -1,10 +1,15 @@
 .signup-container{
     max-width: 400px;
-    margin: 50px auto;
+    margin: auto;
+    padding-bottom: 120px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 mat-card{
     padding: 25px;
 }
 mat-card-title{
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }

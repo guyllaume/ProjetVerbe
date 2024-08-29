@@ -3,6 +3,7 @@
 @use 'app/_app.component.scss' as app;
 @use 'app/signup/_signup.component.scss' as signup;
 @use 'app/login/_login.component.scss' as login;
+@use 'app/home/_home.component.scss' as home;
 
 @include mat.core();
 
@@ -11,6 +12,7 @@ html{
   @include app.color(m3-theme.$light-theme);
   @include signup.color(m3-theme.$light-theme);
   @include login.color(m3-theme.$light-theme);
+  @include home.color(m3-theme.$light-theme);
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,26 +1,28 @@
+<div class="home-container">
 <div class="signup-container">
     <mat-card class="signup-card">
         <mat-card-title>SignUp</mat-card-title>
         <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
                 <input matInput placeholder="Email" formControlName="email" type="email">
                 <mat-error>Email is Required</mat-error>
             </mat-form-field>
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="outline">
                 <mat-label>Name</mat-label>
                 <input matInput placeholder="Name" formControlName="name">
                 <mat-error>Name is Required</mat-error>
             </mat-form-field>
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="outline">
                 <mat-label>Password</mat-label>
                 <input matInput placeholder="Password" formControlName="password" type="password">
                 <mat-error>Password is Required</mat-error>
             </mat-form-field>
             <mat-card-actions>
-                <button mat-raised-button color="primary" type="submit" [disabled]="this.signupForm.invalid">SignUp</button>
+                <button mat-raised-button color="primary" type="submit" [disabled]="this.signupForm.invalid" >SignUp</button>
             </mat-card-actions>
         </form>
     </mat-card>
 
+</div>
 </div>
