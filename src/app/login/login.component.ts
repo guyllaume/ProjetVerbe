@@ -30,7 +30,7 @@ export class LoginComponent {
         localStorage.setItem('token', JSON.stringify(result.token));
         localStorage.setItem('email', JSON.stringify(result.logged_user.email));
         localStorage.setItem('name', JSON.stringify(result.logged_user.name));
-        this.router.navigate(['']);
+        this.router.navigate(['dashboard']);
       }
     });
   }

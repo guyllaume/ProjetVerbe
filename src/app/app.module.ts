@@ -19,6 +19,8 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { SignupDialogComponent } from './signup-dialog/signup-dialog.component';
 import { LoginDialogComponent } from './login-dialog/login-dialog.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FavoriteListComponent } from './favorite-list/favorite-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { LoginDialogComponent } from './login-dialog/login-dialog.component';
     SignupComponent,
     HomeComponent,
     SignupDialogComponent,
-    LoginDialogComponent
+    LoginDialogComponent,
+    DashboardComponent,
+    FavoriteListComponent
   ],
   imports: [
     BrowserModule,

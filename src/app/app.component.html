@@ -2,9 +2,12 @@
   <img src="assets/images/logo.png" alt="Logo"/>
   <nav>
     <ul class="nav-links">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/login">Login</a></li>
-      <li><a routerLink="/signup">Signup</a></li>
+      <li><a routerLink="/" *ngIf="!userService.isLoggedIn()">Home</a></li>
+      <li><a routerLink="/login" *ngIf="!userService.isLoggedIn()">Login</a></li>
+      <li><a routerLink="/signup" *ngIf="!userService.isLoggedIn()">Signup</a></li>
+      <li><a routerLink="/dashboard" *ngIf="userService.isLoggedIn()">Dashboard</a></li>
+      <li><a routerLink="/favorite-list" *ngIf="userService.isLoggedIn()">Favorite</a></li>
+      <li><a routerLink="/" *ngIf="userService.isLoggedIn()" (click)="userService.logout()">Logout</a></li>
     </ul>
   </nav>
 </header>

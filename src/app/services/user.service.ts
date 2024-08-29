@@ -18,4 +18,16 @@ export class UserService {
     return this.http.post(`${this.apiUrl}signup`, { email, name, password });
   }
 
+  public isLoggedIn(): boolean {
+    if (typeof window !== 'undefined' && localStorage) {
+      return !!localStorage.getItem('token');
+    }
+    return false;
+  }
+
+  public logout(): void {
+    localStorage.removeItem('token');
+    localStorage.removeItem('email');
+    localStorage.removeItem('name');
+  }
 }
