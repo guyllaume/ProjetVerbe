@@ -21,6 +21,8 @@ import { SignupDialogComponent } from './signup-dialog/signup-dialog.component';
 import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FavoriteListComponent } from './favorite-list/favorite-list.component';
+import { DailyQuizComponent } from './daily-quiz/daily-quiz.component';
+import { JourneyComponent } from './journey/journey.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { FavoriteListComponent } from './favorite-list/favorite-list.component';
     SignupDialogComponent,
     LoginDialogComponent,
     DashboardComponent,
-    FavoriteListComponent
+    FavoriteListComponent,
+    DailyQuizComponent,
+    JourneyComponent
   ],
   imports: [
     BrowserModule,
