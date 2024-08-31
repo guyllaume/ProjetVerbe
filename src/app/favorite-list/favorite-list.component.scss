@@ -1,0 +1,13 @@
+.favoriteList-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1025px;
+    width: 100%;
+}
+.favorite-card{
+    padding: 20px;
+    width: 80%;
+    margin: 20px 0;
+}

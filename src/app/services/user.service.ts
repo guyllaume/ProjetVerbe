@@ -25,6 +25,16 @@ export class UserService {
     return false;
   }
 
+  public getToken(): string {
+    if (typeof window !== 'undefined' && localStorage) {
+      const token = localStorage.getItem('token');
+      if (token) {
+        return JSON.parse(token);
+      }
+    }
+    return '';
+  }
+
   public logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('email');

@@ -1,0 +1,11 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+    .favoriteList-container{
+        background-color: mat.get-theme-color($theme, tertiary, 95);
+    }
+    .favorite-card{
+        background-color: mat.get-theme-color($theme, tertiary, 90);
+    }
+}

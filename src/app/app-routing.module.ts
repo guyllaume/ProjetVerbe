@@ -8,6 +8,7 @@ import { authGuard } from './auth.guard';
 import { FavoriteListComponent } from './favorite-list/favorite-list.component';
 import { JourneyComponent } from './journey/journey.component';
 import { DailyQuizComponent } from './daily-quiz/daily-quiz.component';
+import { VerbDetailsComponent } from './verb-details/verb-details.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,6 +22,8 @@ const routes: Routes = [
       component: DailyQuizComponent, canActivate: [authGuard]},
   {path: 'journey',
       component: JourneyComponent, canActivate: [authGuard]},
+  {path: 'verb-details',
+      component: VerbDetailsComponent, canActivate: [authGuard]},
 ];
 
 @NgModule({
