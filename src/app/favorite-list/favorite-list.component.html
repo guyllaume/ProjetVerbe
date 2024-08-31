@@ -1,1 +1,14 @@
-<p>favorite-list works!</p>
+<div class="favoriteList-container">
+    <mat-card class="favorite-card" *ngFor="let verb of favoriteList">
+        <mat-card-title>{{verb.verb}}</mat-card-title>
+        <mat-card-content>
+            {{verb.wordVerbGroup[0].toUpperCase() + verb.wordVerbGroup.toLowerCase().slice(1)}}
+            <br>
+            {{verb.wordVerbType[0].toUpperCase() + verb.wordVerbType.toLowerCase().slice(1)}}
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-button (click)="goToVerbDetails(verb.verb)">Voir table de conjugaison</button>
+            <button mat-button (click)="deleteFavorite(verb.id)">Supprimer</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -19,7 +19,6 @@ export class LoginDialogComponent {
     this.processData(); 
   }
   processData(){
-    console.log(this.data);
     if(this.data.error){
       this.titre = 'Erreur';
       this.message = this.data.error.error;

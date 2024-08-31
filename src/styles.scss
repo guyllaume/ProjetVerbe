@@ -5,6 +5,7 @@
 @use 'app/login/_login.component.scss' as login;
 @use 'app/home/_home.component.scss' as home;
 @use 'app/dashboard/_dashboard.component.scss' as dashboard;
+@use 'app/favorite-list/_favorite-list.component.scss' as favoriteList;
 
 @include mat.core();
 
@@ -15,6 +16,7 @@ html{
   @include login.color(m3-theme.$light-theme);
   @include home.color(m3-theme.$light-theme);
   @include dashboard.color(m3-theme.$light-theme);
+  @include favoriteList.color(m3-theme.$light-theme);
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -23,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FavoriteListComponent } from './favorite-list/favorite-list.component';
 import { DailyQuizComponent } from './daily-quiz/daily-quiz.component';
 import { JourneyComponent } from './journey/journey.component';
+import { VerbDetailsComponent } from './verb-details/verb-details.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { JourneyComponent } from './journey/journey.component';
     DashboardComponent,
     FavoriteListComponent,
     DailyQuizComponent,
-    JourneyComponent
+    JourneyComponent,
+    VerbDetailsComponent
   ],
   imports: [
     BrowserModule,
