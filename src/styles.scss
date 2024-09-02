@@ -6,6 +6,7 @@
 @use 'app/home/_home.component.scss' as home;
 @use 'app/dashboard/_dashboard.component.scss' as dashboard;
 @use 'app/favorite-list/_favorite-list.component.scss' as favoriteList;
+@use 'app/verb-details/_verb-details.component.scss' as verbDetails;
 
 @include mat.core();
 
@@ -17,6 +18,7 @@ html{
   @include home.color(m3-theme.$light-theme);
   @include dashboard.color(m3-theme.$light-theme);
   @include favoriteList.color(m3-theme.$light-theme);
+  @include verbDetails.color(m3-theme.$light-theme);
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

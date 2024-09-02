@@ -43,12 +43,12 @@ export interface Verb {
     id: string;
 }
 export interface ConjugationForms {
-    HeSheIt: string;
     I: string;
-    They: string;
-    We: string;
     You: string;
+    HeSheIt: string;
+    We: string;
     YouAll: string;
+    They: string;
 }
 
 export interface ImperativeForms {
@@ -56,3 +56,5 @@ export interface ImperativeForms {
     Second: string;
     Third: string;
 }
+
+

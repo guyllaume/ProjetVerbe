@@ -25,7 +25,7 @@ export class FavoriteListComponent {
           this.favoriteNameList.forEach(verb => {
             this.verbService.getVerb(verb.verb, this.userService.getToken()).subscribe(
               (res) =>{
-                this.favoriteList.push(res.verb);
+                this.favoriteList.push(res);
                 console.log(this.favoriteList[0]);
               },
               (err) =>{
@@ -54,7 +54,9 @@ export class FavoriteListComponent {
   }
 
   public goToVerbDetails(verb: string){
-    this.router.navigate(['/verb-details']);
-  }
+    this.router.navigate(['/verb-details'],{
+      queryParams: {verb: verb}
+    }
+  )}
 
 }
