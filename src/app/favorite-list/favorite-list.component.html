@@ -7,8 +7,8 @@
             {{verb.wordVerbType[0].toUpperCase() + verb.wordVerbType.toLowerCase().slice(1)}}
         </mat-card-content>
         <mat-card-actions align="end">
-            <button mat-button (click)="goToVerbDetails(verb.verb)">Voir table de conjugaison</button>
-            <button mat-button (click)="deleteFavorite(verb.id)">Supprimer</button>
+            <button mat-raised-button (click)="goToVerbDetails(verb.verb)">Voir table de conjugaison</button>
+            <button mat-raised-button (click)="deleteFavorite(verb.id)">Supprimer</button>
         </mat-card-actions>
     </mat-card>
 </div>

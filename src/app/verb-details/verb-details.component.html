@@ -1,1 +1,213 @@
-<p>verb-details works!</p>
+<div class="VerbDetail-container">
+    <mat-card class="verb-card" >
+        <img class="titleBubble" src="../../assets/images/bubble_v1.png">
+        <mat-card-title class="titleBubbleTitle">{{verb.verb.toUpperCase()}}</mat-card-title>
+        <mat-card-subtitle>
+            {{verb.wordConjugateWhichVerbModel[0].toUpperCase() + verb.wordConjugateWhichVerbModel.toLowerCase().slice(1)}} |
+            {{verb.wordVerbGroup[0].toUpperCase() + verb.wordVerbGroup.toLowerCase().slice(1)}} |
+            {{verb.wordVerbType[0].toUpperCase() + verb.wordVerbType.toLowerCase().slice(1)}}
+            <br>
+            {{verb.wordConjugateRule[0].toUpperCase() + verb.wordConjugateRule.toLowerCase().slice(1)}} |
+            {{verb.wordConjugateWithWhichVerb[0].toUpperCase() + verb.wordConjugateWithWhichVerb.toLowerCase().slice(1)}}
+        </mat-card-subtitle>
+        <mat-card-content>
+            <mat-card class="time-card">
+                <mat-card-title>Indicatif</mat-card-title>
+                <mat-card-content class="card-content-flex">
+                    <mat-list>
+                        <mat-label>Présent</mat-label>
+                        <mat-list-item>{{verb.indicatif.present.I}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.present.You}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.present.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.present.We}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.present.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.present.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Imparfait</mat-label>
+                        <mat-list-item>{{verb.indicatif.imparfait.I}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.imparfait.You}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.imparfait.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.imparfait.We}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.imparfait.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.imparfait.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Futur simple</mat-label>
+                        <mat-list-item>{{verb.indicatif.futurSimple.I}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurSimple.You}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurSimple.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurSimple.We}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurSimple.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurSimple.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Passé Simple</mat-label>
+                        <mat-list-item>{{verb.indicatif.passeSimple.I}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeSimple.You}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeSimple.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeSimple.We}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeSimple.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeSimple.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Passé Composé</mat-label>
+                        <mat-list-item>{{verb.indicatif.passeCompose.I}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeCompose.You}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeCompose.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeCompose.We}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeCompose.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeCompose.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Plus Que Parfait</mat-label>
+                        <mat-list-item>{{verb.indicatif.plusQueParfait.I}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.plusQueParfait.You}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.plusQueParfait.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.plusQueParfait.We}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.plusQueParfait.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.plusQueParfait.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Futur Antérieur</mat-label>
+                        <mat-list-item>{{verb.indicatif.futurAnterieur.I}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurAnterieur.You}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurAnterieur.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurAnterieur.We}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurAnterieur.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.futurAnterieur.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Passé Antérieur</mat-label>
+                        <mat-list-item>{{verb.indicatif.passeAnterieur.I}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeAnterieur.You}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeAnterieur.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeAnterieur.We}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeAnterieur.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.indicatif.passeAnterieur.They}}</mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="time-card">
+                <mat-card-title>Subjonctif</mat-card-title>
+                <mat-card-content class="card-content-flex">
+                    <mat-list>
+                        <mat-label>Présent</mat-label>
+                        <mat-list-item>{{verb.subjonctif.present.I}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.present.You}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.present.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.present.We}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.present.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.present.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Imparfait</mat-label>
+                        <mat-list-item>{{verb.subjonctif.imparfait.I}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.imparfait.You}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.imparfait.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.imparfait.We}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.imparfait.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.imparfait.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Passé Composé</mat-label>
+                        <mat-list-item>{{verb.subjonctif.passe.I}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.passe.You}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.passe.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.passe.We}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.passe.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.passe.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Plus Que Parfait</mat-label>
+                        <mat-list-item>{{verb.subjonctif.plusQueParfait.I}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.plusQueParfait.You}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.plusQueParfait.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.plusQueParfait.We}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.plusQueParfait.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.subjonctif.plusQueParfait.They}}</mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="time-card">
+                <mat-card-title>Conditionnel</mat-card-title>
+                <mat-card-content class="card-content-flex">
+                    <mat-list>
+                        <mat-label>Présent</mat-label>
+                        <mat-list-item>{{verb.conditionnel.present.I}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.present.You}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.present.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.present.We}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.present.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.present.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Passé 1re Forme</mat-label>
+                        <mat-list-item>{{verb.conditionnel.passe1reForme.I}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe1reForme.You}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe1reForme.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe1reForme.We}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe1reForme.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe1reForme.They}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Passé 2eme Forme</mat-label>
+                        <mat-list-item>{{verb.conditionnel.passe2reForme.I}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe2reForme.You}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe2reForme.HeSheIt}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe2reForme.We}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe2reForme.YouAll}}</mat-list-item>
+                        <mat-list-item>{{verb.conditionnel.passe2reForme.They}}</mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="time-card">
+                <mat-card-title>Impératif</mat-card-title>
+                <mat-card-content class="card-content-flex">
+                    <mat-list>
+                        <mat-label>Présent</mat-label>
+                        <mat-list-item>{{verb.imperatif.present.First}}</mat-list-item>
+                        <mat-list-item>{{verb.imperatif.present.Second}}</mat-list-item>
+                        <mat-list-item>{{verb.imperatif.present.Third}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Passé</mat-label>
+                        <mat-list-item>{{verb.imperatif.passe.First}}</mat-list-item>
+                        <mat-list-item>{{verb.imperatif.passe.Second}}</mat-list-item>
+                        <mat-list-item>{{verb.imperatif.passe.Third}}</mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="time-card">
+                <mat-card-title>Participe</mat-card-title>
+                <mat-card-content class="card-content-flex">
+                    <mat-list>
+                        <mat-label>Présent</mat-label>
+                        <mat-list-item>{{verb.participe.present}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Passé</mat-label>
+                        <mat-list-item>{{verb.participe.passe}}</mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="time-card">
+                <mat-card-title>Infinitif</mat-card-title>
+                <mat-card-content class="card-content-flex">
+                    <mat-list>
+                        <mat-label>Présent</mat-label>
+                        <mat-list-item>{{verb.infinitive.present}}</mat-list-item>
+                    </mat-list>
+                    <mat-list>
+                        <mat-label>Passé</mat-label>
+                        <mat-list-item>{{verb.infinitive.passe}}</mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-flat-button (click)="goToFavoriteList()">Retour</button>
+            <button mat-flat-button (click)="deleteFavorite(verb.id)">Supprimer</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

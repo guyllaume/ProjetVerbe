@@ -1,0 +1,48 @@
+.VerbDetail-container{
+    width: 100%;
+    padding: 60px 0;
+}
+.verb-card{
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+.card-content-flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+mat-list{
+    flex: 0 1 calc(25% - 36px);
+    box-sizing:border-box;
+    padding: 8px;
+}
+.titleBubble{
+    position: absolute;
+    width: 700px;
+    height: 300px;
+    left: -220px;
+    top: -110px;
+    z-index: 0;
+}
+.titleBubbleTitle{
+    z-index: 1;
+    font-size: xx-large;
+    transform: translate(0, -10px);
+    margin-bottom: 80px;
+    font-weight: bold;
+}
+.time-card{
+    margin: 20px 0;
+    padding: 10px;
+    mat-card-title{
+        font-weight: 700;
+    }
+}
+mat-label{
+    font-weight: 600;
+}
+button{
+    margin-right: 5px;
+    width: 110px;
+}

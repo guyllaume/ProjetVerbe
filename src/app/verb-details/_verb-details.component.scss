@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+  .VerbDetail-container {
+    background-color: mat.get-theme-color($theme, tertiary, 95);
+  }
+  .verb-card {
+    background-color: mat.get-theme-color($theme, tertiary, 90);
+  }
+  .titleBubbleTitle {
+    color: mat.get-theme-color($theme, primary, 98);
+  }
+  .time-card {
+    margin: 20px 0;
+    padding: 10px;
+  }
+}
