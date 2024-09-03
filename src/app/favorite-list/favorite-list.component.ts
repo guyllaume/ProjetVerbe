@@ -25,8 +25,8 @@ export class FavoriteListComponent {
           this.favoriteNameList.forEach(verb => {
             this.verbService.getVerb(verb.verb, this.userService.getToken()).subscribe(
               (res) =>{
+                res.id = verb.uid;
                 this.favoriteList.push(res);
-                console.log(this.favoriteList[0]);
               },
               (err) =>{
                 console.log(err);
@@ -44,8 +44,7 @@ export class FavoriteListComponent {
   public deleteFavorite(id: string){
     this.verbService.deleteFavorite(id, this.userService.getToken()).subscribe(
       (res) =>{
-        console.log(res);
-        this.router.navigate(['/favorite-list']);
+        window.location.reload();
       },
       (err) =>{
         console.log(err);

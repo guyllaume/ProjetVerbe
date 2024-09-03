@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Verb } from '../Models/verb.model';
 import { VerbService } from '../services/verb.service';
 import { UserService } from '../services/user.service';
+import { VerbSimple } from '../Models/verbSimple.model';
 
 @Component({
   selector: 'app-verb-details',
@@ -18,11 +19,21 @@ export class VerbDetailsComponent{
    public ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       const verb = params['verb'];
-      console.log('Verb:', verb);
       this.verbService.getVerb(verb, this.userService.getToken()).subscribe(
         (res) =>{
           this.verb = res;
-          console.log(this.verb);
+          this.verbService.getAllFavorite(this.userService.getToken()).subscribe(
+            (res) =>{
+              res.verbs.forEach((verbFavorite: VerbSimple) => {
+                if(this.verb.verb == verbFavorite.verb){
+                  this.verb.id = verbFavorite.uid;
+                }
+              });
+            },
+            (err) =>{
+              console.log(err);
+            }
+          )
         },
         (err) =>{
           console.log(err);

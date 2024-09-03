@@ -16,7 +16,7 @@ export class VerbService {
     const headers = new HttpHeaders({
       'x-access-token': token
     });
-    return this.http.post(`${this.apiUrl}random`, quantity , { headers});
+    return this.http.post(`${this.apiUrl}random`, {quantity: quantity} , {headers});
   }
   public getVerb(verb: string, token: string): Observable<any> {
     const headers = new HttpHeaders({
@@ -31,7 +31,7 @@ export class VerbService {
     const headers = new HttpHeaders({
       'x-access-token': token
     });
-    return this.http.post(`${this.apiUrl}favorites`, verb , {headers});
+    return this.http.post(`${this.apiUrl}favorites`, {verb: verb} , {headers});
   }
   public getFavorite(id: string, token: string): Observable<any> {
     const headers = new HttpHeaders({
