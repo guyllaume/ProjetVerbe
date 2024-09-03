@@ -2,13 +2,16 @@
 @use "@angular/material" as mat;
 
 @mixin color($theme) {
-  .VerbDetail-container {
+  .daily-quiz-container {
     background-color: mat.get-theme-color($theme, tertiary, 95);
   }
-  .verb-card {
+  .quiz-card{
     background-color: mat.get-theme-color($theme, tertiary, 90);
   }
-  .titleBubbleTitle {
-    color: mat.get-theme-color($theme, primary, 98);
+  .answer-card:hover{
+    background-color: mat.get-theme-color($theme, primary, 90);
+  }
+  .selected{
+    background-color: mat.get-theme-color($theme, primary, 90);
   }
 }

@@ -1,1 +1,26 @@
-<p>daily-quiz works!</p>
+<div class="daily-quiz-container">
+    <mat-card class="quiz-card">
+        <img class="titleBubble" src="../../assets/images/bubble_v1.png">
+        <img *ngIf="!isFavorite" (click)="addFavorite()" class="star" src="../../assets/images/star-outline.png">
+        <img *ngIf="isFavorite" (click)="deleteFavorite()" class="star" src="../../assets/images/star-filled.png">
+        <mat-card-title class="titleBubbleTitle">{{verb.verb}}</mat-card-title>
+        <mat-card-subtitle>{{Questions[currentQuestionIndex].question}}</mat-card-subtitle>
+        <p class="question-number">{{currentQuestionIndex + 1}} of {{Questions.length}}</p>
+        <mat-progress-bar mode="determinate" [value]="progressValue"></mat-progress-bar>
+        <mat-card-subtitle>{{Questions[currentQuestionIndex].difficulty}}</mat-card-subtitle>
+        <mat-card-content class="question-content">
+        <mat-card class="answer-card" *ngFor="let answer of Questions[currentQuestionIndex].possibleAnswers" 
+        [ngClass]="{'selected': isAnswerSelected(answer)}"
+        (click)="onAnswerClick(answer)">
+            <mat-card-content>{{answer}}</mat-card-content>
+        </mat-card>
+        <p *ngIf="questionAnswered || answerMessage">{{answerMessage}}</p>
+        <p *ngIf="currentAnswerIndex === Questions.length">{{this.getFinalMessage()}}</p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button *ngIf="!questionAnswered" mat-raised-button (click)="submitQuestion()">Soumettre</button>
+            <button *ngIf="questionAnswered && currentQuestionIndex < Questions.length-1" mat-raised-button (click)="nextQuestion()">Suivant</button>
+            <button *ngIf="questionAnswered && currentQuestionIndex >= Questions.length-1" mat-raised-button (click)="goToDashboard()">Retour</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

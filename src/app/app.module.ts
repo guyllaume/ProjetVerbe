@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatListModule } from '@angular/material/list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -48,7 +49,8 @@ import { VerbDetailsComponent } from './verb-details/verb-details.component';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatListModule
+    MatListModule,
+    MatProgressBarModule
   ],
   providers: [
     provideClientHydration(),
